@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리 연산자</title>
+</head>
+
+<body>
+
+    <script>
+        let 참 = true;
+        let 거짓 = false;
+        const a = '목단비'
+
+        console.log(참, 거짓);
+        console.log(!참, !거짓); // ! > NOT 부정연산자
+
+        console.log(참 && 거짓, 참 && 참) // && > AND 그리고 연산자 (하나라도 거짓 = 거짓)
+        console.log(거짓 || 참, 거짓 || 거짓) // || > OR 또는 연산자 (하나라도 참 = 참)
+
+        a ? console.log(a + ' 진실') : console.log('거짓말');
+
+        if (a) {
+            console.log(a + ' 진실')
+        } else {
+            console.log('거짓말')
+        }
+
+        a && console.log(a + ' 진실');
+
+        if (a) {
+            console.log(a + ' 진실')
+        }
+
+        !a || console.log('거짓말');
+
+    </script>
+</body>
+
+</html>
