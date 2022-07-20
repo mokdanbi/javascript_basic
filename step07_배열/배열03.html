@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 03</title>
+</head>
+
+<body>
+    <h1>배열을 공부합시다.</h1>
+
+    <script>
+        const 걍배열 = [
+            {id: 1, content: '나는 메로나'},
+            {id: 2, content: '나는 돼지바'},
+            {id: 3, content: '나는 스크류바'},
+            {id: 4, content: '나는 빠삐코'},
+            {id: 5, content: '나는 죠스바'},
+            {id: 6, content: '나는 초코퍼지'},
+            {id: 7, content: '나는 바밤바'},
+        ];
+
+        // 배열을 도와주는 함수 01 forEach
+        걍배열.forEach((el, idx, arry) => console.log(el.content, idx, arry));
+
+
+        const TUL = document.querySelectorAll('.tMenu>li');
+        const TCON = document.querySelectorAll('.tContent>div');
+        console.log(TUL);
+
+        TUL.forEach((el, idx) => {
+            el.addEventListener('click', () => {
+                TUL.forEach(el => el.classList.remove('on'))
+                el.classList.add('on');
+                console.log(idx)
+            })
+        })
+    </script>
+</body>
+
+</html>
