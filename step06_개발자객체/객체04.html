@@ -5,28 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>객체 04</title>
+    <title>객체04 - 객체생성자함수</title>
 </head>
 
 <body>
     <script>
-        //1. 객체를 찍어내는 기계를 
-        function Mok(name)
-        this.name = name;
-        this.showName = function () {
-            console.log(this.name)
+        // 1. 객체를 찍어내는 기계를 만드는 옛날 방법. class로 바뀜.
+        function Lee(name) {
+            this.name = name;
+            this.showName = function () {
+                console.log(this.name)
+            }
         }
 
-        const 목단비 = new Mok('목단비');
-        목단비.showName();
+        // 인스터스란 무엇인가???
 
-        const 금단비 = new Mok('금비');
-        금단비.showName();
+        const 이창훈 = new Lee('이창훈');
+        이창훈.showName();
 
-        Mok.prototype.group = '오래된 사람';
+        const 김창훈 = new Lee('쨈민이');
+        김창훈.showName();
 
-        console.log(금단비.group);
-        console.log(목단비.group);
+        Lee.prototype.group = '오래된사람';
+
+        console.log(김창훈)
+
+        console.log(김창훈.group);
+        console.log(이창훈.group);
+
     </script>
 </body>
 
